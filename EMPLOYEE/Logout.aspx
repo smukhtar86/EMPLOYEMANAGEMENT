@@ -1,0 +1,106 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EMPLOYEE/MasterPage.master" AutoEventWireup="true" CodeFile="Logout.aspx.cs" Inherits="EMPLOYEE_Logout" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Cphead" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Logout</h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+            <li class="active">Logout</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <!-- /.col -->
+            <div class="col-md-11">
+                <asp:UpdatePanel runat="server" ID="UpdatePanel1">
+                    <ContentTemplate>
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#settings" data-toggle="tab">Logout</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <!-- /.tab-pane -->
+
+                                <div class="active tab-pane" id="settings">
+                                    <ul class="timeline timeline-inverse">
+                                        <!-- timeline time label -->
+                                        <li class="time-label" runat="server" id="liMsg" visible="false">
+                                            <span class="bg-red">10 Feb. 2014
+                                            </span>
+                                        </li>
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        <li>
+                                            <i class="fa fa-user bg-blue"></i>
+                                            <div class="timeline-item">
+                                                <span class="time"><i class="fa fa-clock-o"></i></span>
+                                                <h3 class="timeline-header"><a href="#">Logout</a></h3>
+                                                <div class="timeline-body">
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label for="inputName" class="col-sm-2 control-label">Reason</label>
+                                                            <div class="col-sm-9">
+                                                                <asp:TextBox runat="server" type="text" CssClass="form-control" ID="txtDate" placeholder="Reason" required="true"></asp:TextBox>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                        <div class="form-group">
+                                                            <div class="col-sm-offset-2 col-sm-10">
+                                                                <asp:Button runat="server" ID="btnSave" type="submit" class="btn btn-danger" Text="Logout" OnClick="btnSave_Click" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <!-- END timeline item -->
+                                    
+                                        <li>
+                                            <i class="fa fa-clock-o bg-gray"></i>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div>
+                        <!-- /.nav-tabs-custom -->
+                        </span></span>
+                    </ContentTemplate>
+                    <Triggers>
+                    </Triggers>
+                </asp:UpdatePanel>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+    <!-- /.content -->
+    <script src="../Template/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../Template/dist/js/demo.js"></script>
+    <!-- page script -->
+    <script>
+        $(function () {
+            $("#example1").DataTable();
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false
+            });
+        });
+    </script>
+</asp:Content>
+
